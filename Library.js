@@ -69,11 +69,9 @@ class Library {
     )
 
     latePatrons.forEach((patron) => {
-      const dueDate = patron.currentBook
-      const daysOverdue = Math.floor(
-        (currentDate.getTime() - dueDate.getTime()) / oneDay
-      )
-      patron.balance = this.dailyFine * daysOverdue
+      const dueDate = patron.currentBook.dueDate
+      const daysOverdue = Math.floor((currentDate.getTime() - dueDate) / oneDay)
+      patron.balance = Number((this.dailyFine * daysOverdue).toFixed(2))
     })
   }
 }
