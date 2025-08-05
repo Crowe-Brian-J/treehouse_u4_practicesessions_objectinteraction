@@ -19,4 +19,24 @@ class Patron {
     this.email = email
     this.currentBook = null
   }
+
+  //checkOut method
+  checkOut(book) {
+    //update patron's current book
+    this.currentBook = book
+    //update book object's patron to be the Patron object itself
+    book.patron = this
+    //refactor checkOut method to use new out setter method instead
+    book.out = true
+  }
+
+  //returnBook method
+  returnBook(book) {
+    //update patron's current book to null
+    this.currentBook = null
+    //update book's out property to false
+    book.out = false
+    //update book's patron property to null
+    book.patron = null
+  }
 }
