@@ -18,6 +18,8 @@ class Patron {
     this.name = name
     this.email = email
     this.currentBook = null
+    //add balance to patron constructor in case of fines
+    this.balance = 0
   }
 
   //checkOut method

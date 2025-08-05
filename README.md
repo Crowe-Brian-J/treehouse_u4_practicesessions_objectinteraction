@@ -69,3 +69,11 @@ Don't forget to add parameters for any values that need to be passed in to each 
 3) Add a getter method to the Book class called out(). It should return the value of the _out backing property.
 
 4) Back in the Patron class, refactor your checkOut() method to use the new out() setter method instead of your existing code.
+
+### Seventh Set of Video Instructions
+
+1) Add a property called dailyFine, initialized to .1, to the Library class constructor method.
+
+2) Add a property called balance, initialized to 0, to the Patron class constructor method.
+
+3) Add a method called chargeFines() to the Library class that finds all Patrons with overdue books and charges them the daily fine for every day their book is late.
